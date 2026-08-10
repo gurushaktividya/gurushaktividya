@@ -1,0 +1,15 @@
+{
+  // Cloudflare Worker config for gurushaktividya.com
+  // Keep this file and worker.js side by side in the repo root.
+  "name": "gurushaktividya",
+  "main": "worker.js",
+  "compatibility_date": "2026-08-10",
+  "observability": { "enabled": true },
+
+  // Attaches both hostnames on deploy and creates the DNS records.
+  // If the domains are already attached in the dashboard, this is harmless.
+  "routes": [
+    { "pattern": "gurushaktividya.com", "custom_domain": true },
+    { "pattern": "www.gurushaktividya.com", "custom_domain": true }
+  ]
+}
